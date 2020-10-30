@@ -45,14 +45,17 @@ img {
    overflow:auto;
 }
 
-.image-panel {
+.chinook-panel {
     padding: 2em;
     overflow:auto;
 }
 
-.chinook-components {
-    width:50%;
+.chinook-ui {
+    width:100%;
     background-color:#b8b8b8;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
 }
   
 

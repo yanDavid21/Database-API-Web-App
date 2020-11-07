@@ -44,7 +44,6 @@ router.post('/', (req, res, next) => {
         }
         returnArr.push(obj);
       })
-      console.log(returnArr);
       res.json({
         status: 'success',
         response: returnArr

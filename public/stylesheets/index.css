@@ -64,13 +64,21 @@ input[type=text] {
 .query-input {
     border-radius:1em;
     height:15em;
-    width:60%;
     border-width:0px;
+    font-size:1.25em;
+    padding:.5em;
+    width:100%;
+    min-width:50%
+}
+
+.block-input {
+    width:80%;
 }
 
 .button {
     border-radius:.5em;
     padding:.5em;
+    font-size:.75em;
 }
 
 .submit-button {
@@ -130,7 +138,7 @@ input[type=text] {
     z-index: 1;
     padding-top:.5em;
     padding-bottom:.5em;
-    font-size: .5em;
+    font-size: .75em;
 }
 
 .dropdown-content >div:nth-child(odd) {
@@ -156,6 +164,30 @@ input[type=text] {
     display: inline-flex;
 }
 
-table, th, td {
+th, td {
     border: 1px solid black;
-  }
+}
+
+  textarea:focus, input:focus{
+    outline: none;
+}
+
+.table {
+    border: 0px;
+}
+
+.query-form {
+    display:flex;
+    justify-content: baseline;
+    align-items: center;
+}
+
+.button-panel {
+    width:20%;
+}
+
+.button-panel > * {
+    margin-right:1em;
+}
+
+

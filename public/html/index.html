@@ -19,28 +19,28 @@
                         <a href="/artist">Artists</a>
                     </div>
                     <div>
-                        <a href="">Albums</a>
+                        <a href="/album">Albums</a>
                     </div>
                     <div>
-                        <a href="">Tracks</a>
+                        <a href="/track">Tracks</a>
                     </div>
                     <div>
-                        <a href="">Media Types</a>
+                        <a href="/media-type">Media Types</a>
                     </div>
                     <div>
-                        <a href="">Playlists</a>
+                        <a href="/playlis">Playlists</a>
                     </div>
                     <div>
-                        <a href="">Genres</a>
+                        <a href="/genre">Genres</a>
                     </div>
                     <div>
-                        <a href="">Invoices</a>
+                        <a href="/invoices">Invoices</a>
                     </div>
                     <div>
-                        <a href="">Customers</a>
+                        <a href="/customers">Customers</a>
                     </div>
                     <div>
-                        <a href="">Employees</a>
+                        <a href="/employees">Employees</a>
                     </div>
                 </div>
             </div>
@@ -67,16 +67,18 @@
         <div class="chinook-panel flex-row-center" id="query-form">
             <div class="chinook-ui flex-column">
                 <h2>Input your query here!</h2>
-                <form>
-                    <textarea class="query-input" type="text" id="query-input" cols="50" rows="4"></textarea>
-                    <div class="flex-row-center inline">
-                        <input class="button submit-button" type="button" onclick="test()" value="Submit">
+                <form class = "query-form">
+                    <div class="block-input flex-row-center">
+                        <textarea class="query-input" type="text" id="query-input" cols="50" rows="4" placeholder="SELECT * From Artist; ..."></textarea>
+                    </div>
+                    <div class="flex-row-center button-panel">
+                        <input class="button submit-button" type="button" onclick="test()" value="Query">
                         <input class="button reset-button" type="reset">
                     </div>
                 </form>
                 <h3>Your query results:</h3>
                 <div class="output" id="output">
-                    <table>
+                    <table id="table">
                         <thead>
                             <tr id="output-head">
                             

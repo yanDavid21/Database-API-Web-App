@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Chinook Viewer</title>
     <link rel="stylesheet" href="../stylesheets/index.css">
+    <script type="text/javascript" src="../javascripts/query.js"></script> 
 </head>
 
 <body>
@@ -15,7 +16,7 @@
                 <div>Explore</div>
                 <div class="dropdown-content">
                     <div>
-                        <a href="">Artists</a>
+                        <a href="/artist">Artists</a>
                     </div>
                     <div>
                         <a href="">Albums</a>
@@ -63,15 +64,17 @@
             </p>
             <img src="../images/chinook.PNG" alt="The relation schema for the Chinook database." />
         </div>
-        <div class="chinook-panel flex-row-center">
+        <div class="chinook-panel flex-row-center" id="query-form">
             <div class="chinook-ui flex-column">
                 <h2>Input your query here!</h2>
                 <form>
-                    <input class="query-input" type="text"/>
-                    <input class="button submit-button" type="submit">
-                    <input class="button reset-button" type="reset">
+                    <textarea class="query-input" type="text" id="query-input" cols="50" rows="4"></textarea>
+                    <div class="flex-row-center inline">
+                        <input class="button submit-button" type="button" onclick="test()" value="Submit">
+                        <input class="button reset-button" type="reset">
+                    </div>
                 </form>
-                <div class="output">
+                <div class="output" id = "output">
                 </div>
             </div>
         </div>

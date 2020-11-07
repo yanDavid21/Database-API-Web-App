@@ -1,6 +1,11 @@
-function test(query) {
+function test() {
+    let query = document.getElementById("query-input").value;
+    //scrub query
+    if (query.indexOf(";") != -1) {
+        query = query.substring(0, query.indexOf(";"))
+    }
     data = {
-        queryString: document.getElementById("query-input").value
+        queryString: query
     }
     fetch('http://localhost:3000/', {
         method: 'POST',

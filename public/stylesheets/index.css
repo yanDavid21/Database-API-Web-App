@@ -149,12 +149,13 @@ input[type=text] {
     background-color: #5f5f5f;
     overflow: auto;
     max-height: 100vh;
-}
-
-.output > div:nth-child(odd) {
-    background-color: #5f5f5f;
+    font-size: .75em;
 }
 
 .inline {
     display: inline-flex;
 }
+
+table, th, td {
+    border: 1px solid black;
+  }

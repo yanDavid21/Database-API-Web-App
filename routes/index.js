@@ -1,7 +1,6 @@
 const express = require('express');
 const path = require('path');
 const mysql = require('mysql');
-const { response } = require('../app');
 
 const app = express();
 const router = express.Router();
@@ -16,7 +15,7 @@ const con = mysql.createConnection({
 
 con.connect(function (err) {
   if (err) {
-    console.log("Error connectin to database.")
+    console.log("Error connecting to database.")
   } else {
     console.log("Connected to database successfully.")
   }

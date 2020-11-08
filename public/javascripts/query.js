@@ -6,14 +6,24 @@ function removeChildById(id) {
     }
 }
 
-function test() {
+function query() {
     let query = document.getElementById("query-input").value;
     //scrub query
     if (query.indexOf(";") != -1) {
         query = query.substring(0, query.indexOf(";"))
     }
+    communicateWithBackEnd(query);
+}
+
+function autoQuery() {
+    let tableName = document.getElementsByClassName("about")[0].id;
+    let queryString = "SELECT * FROM " + tableName + ";";
+    communicateWithBackEnd(queryString);
+}
+
+function communicateWithBackEnd(string) {
     data = {
-        queryString: query
+        queryString: string
     }
     fetch('http://localhost:3000/', {
         method: 'POST',
@@ -31,6 +41,7 @@ function test() {
             let arr = object.response;
 
             if (arr.length === 0) { //if new response results in no tuples 
+                let div = document.getElementById("output");
                 let child = document.createElement("div");
                 let text = document.createTextNode("Query successfully ran. No results.");
                 child.appendChild(text);

@@ -8,7 +8,7 @@
     <script type="text/javascript" src="../javascripts/query.js"></script>
 </head>
 
-<body>
+<body onload="autoQuery()">
     <nav class="navigation">
         <a href="/" title="Home">
             <h1>Chinook Explorer</h1>
@@ -66,33 +66,26 @@
             </p>
             <img src="../images/chinook.PNG" alt="The relation schema for the Chinook database." />
         </div>
-        <div class="chinook-panel flex-row-center" id="query-form">
-            <div class="chinook-ui flex-column">
-                <h2>Input your query here!</h2>
-                <form class = "query-form">
-                    <div class="block-input flex-row-center">
-                        <textarea class="query-input" type="text" id="query-input" cols="50" rows="4" placeholder="SELECT * From Artist; ..."></textarea>
-                    </div>
-                    <div class="flex-row-center button-panel">
-                        <input class="button submit-button" type="button" onclick="query()" value="Query">
-                        <input class="button reset-button" type="reset">
-                    </div>
-                </form>
-                <h3>Your query results:</h3>
-                <div class="output" id="output">
-                    <table id="table">
-                        <thead>
-                            <tr id="output-head">
+        <div class="about" id = "Album">
+            <h2>The Album Table</h2>
+            <p>The Artist table stores the name of an artist and an unique id for each artist.
+                Each artist can have a number of albums, a 1 : N relationship, thus the Album table 
+                has a foreign key pointing the artistID of an artist in the Artist table. In other 
+                words the every album has an id that be used to see which artist wrote the album!
+            </p>
+            <div class="output" id="output">
+                <table id="table">
+                    <thead>
+                        <tr id="output-head">
                             
-                            </tr>
-                        </thead>
-                        <tbody id="output-body">
-    
-                        </tbody>
-                    </table>
-                </div>
+                        </tr>
+                    </thead>
+                    <tbody id="output-body">
 
+                    </tbody>
+                </table>
             </div>
+            
         </div>
     </main>
     <div class="flex-row-center footer">

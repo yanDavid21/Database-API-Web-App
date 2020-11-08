@@ -16,13 +16,9 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 15em;
+  width: 20em;
   height: 15em;
 }
-
-input[type=text] {
-    width: 60%;
- }
 
 .navigation {
     display: flex;

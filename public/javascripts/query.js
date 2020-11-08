@@ -1,4 +1,5 @@
 
+//helper function 
 function removeChildById(id) {
     let div = document.getElementById(id);
     while (div.hasChildNodes()) {   //clears previous result if any

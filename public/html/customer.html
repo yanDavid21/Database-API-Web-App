@@ -59,7 +59,7 @@
             <h2>About Chinook</h2>
             <p>Chinook is a sample database containing information that one might find in
                 a music store, with relations such as tracks, artist, genres, and invoices.
-                This web app tech stack includes MariaDB (MySQL server), express for the
+                This web app tech stack includes MariaDB (MySQL server), fetchAPI for the
                 front end, and a node.js server. This was created to explore the database
                 with a more intuitive UI and as practice working with these technologies.
                 Thanks for visiting!
@@ -68,10 +68,12 @@
         </div>
         <div class="about" id = "Customer">
             <h2>The Customer Table</h2>
-            <p>The Artist table stores the name of an artist and an unique id for each artist.
-                Each artist can have a number of albums, a 1 : N relationship, thus the Album table 
-                has a foreign key pointing the artistID of an artist in the Artist table. In other 
-                words the every album has an id that be used to see which artist wrote the album!
+            <p>The Customer table represents customers of the store. This table stores the name of a 
+                customer, an unique id, company, address,city, state, 
+                country, postal code, phone, fax, email, and an employee for each customer.
+                Each customer is helped by an employee and every employee can help several customers
+                so it is a 1 : N relationship, with the Customer table having a foreign key pointing 
+                to the employeeID of an employee in the Employee table.
             </p>
             <div class="output" id="output">
                 <table id="table">
